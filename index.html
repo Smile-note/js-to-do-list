@@ -4,27 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Momentum App</title>
+    <title>My Momentum</title>
+    <link rel="icon" href="img/clock.png">
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-      <span></span>
-      <span></span>
+    <div class="full-box">
+      <div class="links">
+        <div class="naver link">
+          <img
+            class="logo"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEUAxzz///8AxjcAxCZQ0Gjc9N/m9+jR8dbQ9Ntp2YMAxjgAxCwAxTAAxTP7//3p+Osfy01R1HC068Hx/PTL8tVIz2O77cfF7ct/3pXX9d8Awx+L4aA70F+Y5KlJ0mqn6LcszVWh5rB024yH4Jtg2oBa1Xau6bwozVMQgS/cAAACxklEQVR4nO3c7W7aQBBG4Vm7QPGabwqBkBSSpr3/O6yUKi0EbK8NjTKvzvPbWnHixWInks0AAAAAAAAAAAAAAAAAAAAAAAAAQEORJ4kJS8WbrXRLxbdFP8FknjcuFVeTlJXWH5yYfQlphmXTUvnXpIV6zX+rm0ouHE+LhqW8F4Zl0010XxjuGhL9FzbtU/+FYbOtXUqgMNzXPugVCsMuq1lKonAzqllKojA81OxTjcLwWH0XRQr78oXhe+UHVCkMs6q7KFM4sYqfNjKFYV7xPNUprDoqChUuLu9TocKwuvgTXKkwPF3ap1KFF4+KUoVheeF5qlUY7s4TxQrH+7Ojolhh2JzdRLXC85GGXOHZSEOvsPfuJuoVhsNpomDhu6OiYmE/O/5po1h4OtKQLDzZp5qFx0dFzcLjkYZo4dFIQ7Xw3z5VLQzrt08sW/h3pKFb+DbS0C0My1y9MDxH9cLx61FRuTBsSvXC15GGdmHYZ+qF/VK9MByiemGYbdUL+87v4aT5ksPSdeGPRfM1CZd85sKXtOv8Fg63P9ULS0v4KrouHI0e1QstP6gXWt5XL8x26oUWH9QLrdyoF2a7sXihxWf1wtRjruPCwq7dp5+90Mon9UKLa/XCYpp2DvRbaOVQvdDyuXphMbpmn3ootNE1Iw0XhRavGGn4KCyy7kdFH4U2mqkXXjHS8FJoses+dVPYeaThptDivXqhld2Oio4KO440HBV2HGl4KrRt2n8MHRd2Gmm4Kuw00vBVaHGlXthhpOGssMNIw1th+5GGu8Iia7lP3RW2Pir6K2x7VHRYWBStjooOC1vuU4+FFg/qhRZ76oXZL/XCNiMNp4UtRhpeC7N96lHRa6HFO/VCyxNHGh9dWOx6gwSbl7r3ev5ZaZqy0GBQ9TK0/ybxjeWNgTd99zkAAAAAAAAAAAAAAAAAAAAAAAAACb8BlaxF0SY61+4AAAAASUVORK5CYII="
+          />
+          <span onclick="window.open('https://naver.com')"> naver</span>
+        </div>
+        <div class="youtube link">
+          <img class="logo" src="img/youtube.png" />
+          <span onclick="window.open('https://youtube.com')">youtube</span>
+        </div>
+        <div class="google link">
+          <img class="logo" src="img/google.png" />
+          <span onclick="window.open('https://google.com')">google</span>
+        </div>
+        <div class="nomadcoders link">
+          <img class="logo" src="https://nomadcoders.co/m.svg" />
+          <span onclick="window.open('https://nomadcoders.co/')">nomadcoder</span>
+        </div>
+      </div>
+
+      <div class="main-box">
+        <h2 id="clock">00:00</h2>
+        <div class="clock-weather">
+          <form id="login-form" class="hidden">
+            <input class="login-input"
+              required
+              maxlength="15"
+              type="text"
+              placeholder="What is your name?"
+            />
+            <input class="login-button" type="submit" value="Log In" />
+          </form>
+          <div id="greeting" class="hidden">
+            <i class="fas fa-sun"></i>
+            <h1></h1>
+            <i class="fas fa-undo"></i>
+          </div>
+          <div id="weather">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="todos">
+          <div class="todo1">
+            <div class="point point1"> <span>to-do</span></div>
+            <form id="todo-form">
+              <input class="todo-input todo-input1"
+                type="text"
+                placeholder="Write a To Do and Press Enter"
+                required size="41" maxlength="30"
+              />
+            </form>
+            <ul id="todo-list"></ul>
+            <div id="quote">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+
+          <div class="todo2">
+            <div class="point point2"> <span>important</span></div>
+            <form id="todo-form-important">
+              <input class="todo-input todo-input2"
+                type="text"
+                placeholder="Write a Important To Do and Press Enter"
+                required size="41" maxlength="30"
+              />
+            </form>
+            <ul id="todo-list-important"></ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/todo-important.js"></script>
+    <script src="js/weather.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

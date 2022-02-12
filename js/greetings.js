@@ -1,6 +1,8 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const h1 = document.querySelector("#greeting h1");
+const undo = document.querySelector(".fa-undo");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -14,7 +16,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  h1.innerText = `${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -26,3 +28,12 @@ if (savedUsername === null) {
 } else {
   paintGreetings(savedUsername);
 }
+
+function undoName() {
+  localStorage.removeItem(USERNAME_KEY);
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+  greeting.classList.add(HIDDEN_CLASSNAME);
+}
+
+undo.addEventListener("click", undoName);

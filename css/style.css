@@ -1,3 +1,173 @@
+@import "variables.css";
+
 .hidden {
   display: none;
+  visibility: hidden;
+}
+
+#greeting {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+#login-form {
+  margin-left: 30px;
+}
+
+#weather {
+  margin-right: 30px;
+}
+
+.fa-undo {
+  margin-left: 20px;
+  font-size: 10px;
+  color: gray;
+}
+
+.fa-sun {
+  margin-right: 15px;
+  font-size: 30px;
+  color: orange;
+}
+
+body {
+  background-color: var(--black);
+}
+
+span,
+h1,
+h2 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.full-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 20px;
+  padding: 5px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.link span {
+  color: gray;
+  margin-right: 40px;
+  margin-bottom: 2px;
+}
+
+.link span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#clock {
+  font-size: 150px;
+  height: 60px;
+}
+
+.todos {
+  height: 200px;
+  display: flex;
+  margin-top: 15px;
+}
+
+#todo-list,
+#todo-list-important {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.todo1,
+.todo2 {
+  width: 50%;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clock-weather {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.point {
+  height: 22px;
+  width: 100%;
+  border-radius: 0 0;
+}
+
+.point1 {
+  background-color: var(--yellow);
+}
+.point2 {
+  background-color: var(--red);
+}
+.point span {
+  margin-left: 5px;
+}
+
+.todo-input {
+  background-color: var(--black);
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  align-items: center;
+}
+
+button {
+  background-color: var(--black);
+  border-style: none;
+}
+
+li {
+  list-style-type: decimal;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+.todo-input1 {
+  caret-color: var(--yellow);
+  border: none;
+}
+
+.todo-input2 {
+  caret-color: var(--red);
+  border: none;
+}
+
+.login-input {
+  border: none;
+  background-color: var(--black);
+  caret-color: var(--green);
+  color: white;
+  width: 120px;
+}
+
+.login-button {
+  background-color: var(--black);
+  color: var(--green);
+  border: none;
+}
+
+input:focus {
+  outline: none;
 }
